@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+</head>
+<body>
+    <P>Phương trình bậc nhất ax+b=0</P>
+    <input id="A" type="Number "/>x + <input id="B" type="number"/> = 0
+</br>
+    <button onclick="Result()">Result</button>
+    <p id="ket_qua">Result: none</p>
+    <script>
+        function Result() {
+            let a= +document.getElementById("A").value;
+            let b= +document.getElementById("B").value;
+            if (a===0){
+                if(b===0){
+                    document.getElementById("ket_qua").innerHTML = "Phương trình vô số nghiệm";
+                    
+                }else{
+                    document.getElementById("ket_qua").innerHTML= "Phương trình vô nghiệm";
+
+                }
+            } else{
+                let x = -b/a;
+                document.getElementById("ket_qua").innerHTML= "x= " + x;
+            }
+        }
+    </script>
+</body>
+</html>
